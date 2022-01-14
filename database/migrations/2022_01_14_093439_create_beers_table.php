@@ -15,7 +15,13 @@ class CreateBeersTable extends Migration
     {
         Schema::create('beers', function (Blueprint $table) {
             $table->id();
+            $table->string("name");
+            $table->string("type");
+            $table->string("alc");
+            $table->string("year");
+            $table->string("county");
             $table->timestamps();
+
         });
     }
 
