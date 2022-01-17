@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Page Title | App name</title>
+    <title>Page Title | Biersal(notreally)</title>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
@@ -20,10 +20,10 @@
 
     <!-- header -->
     <div class="max-w-6xl mx-auto py-4  text-gray-600 text-sm  flex justify-between">
-        <div class="px-6">App name</div>
+        <div class="px-6">Biersal(notreally)</div>
         <div class="px-6 flex flex-row justify-center gap-x-6">
-            <a href="" class="hover:underline decoration-pink-500 decoration-2">Menu item 1</a>
-            <a href="" class="hover:underline decoration-pink-500 decoration-2">Menu item 2</a>
+            <a href="" class="hover:underline decoration-pink-500 decoration-2">Beers</a>
+            <a href="" class="hover:underline decoration-pink-500 decoration-2">Bar</a>
             <a href="" class="hover:underline decoration-pink-500 decoration-2">Menu item 3</a>
         </div>
         <div class="px-6">
@@ -53,7 +53,7 @@
 
         <!-- main content -->
         <main class="bg-white p-6 " style="min-height: 60vh;">
-            Content can come here
+            <iframe width="800" height="500" src="https://www.youtube-nocookie.com/embed/TNEk4GfEmLs?rel=0&autoplay=1&mute=1&loop=1&controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </main>
     </div>
 </div>
