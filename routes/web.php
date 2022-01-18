@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [\App\Http\Controllers\WelcomeController::class, "show"]);
 
+Route::get('/country.index',[\App\Http\Controllers\CountryController::class, "index"]);
+Route::get('/country.index',[\App\Http\Controllers\CountryController::class, "create"]);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
