@@ -23,7 +23,8 @@ Route::get('/country.create',[\App\Http\Controllers\CountryController::class, "c
 Route::get('/bar.index',[\App\Http\Controllers\BarController::class,"index"]);
 Route::get('/bar.create',[\App\Http\Controllers\BarController::class,"create"]);
 
-
+Route::get('beer.index',[\App\Http\Controllers\BeerController::class,"index"]);
+Route::get('beer.create',[\App\Http\Controllers\BeerController::class,"create"]);
 
 
 Route::get('/dashboard', function () {
