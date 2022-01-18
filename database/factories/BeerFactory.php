@@ -18,7 +18,7 @@ class BeerFactory extends Factory
             'type' => $this->faker->name(),
             'alc' => $this->faker->numberBetween($min = 1, $max = 67.5),
             'year' => $this->faker->numberBetween($min = 1478, $max = 2021),
-            'county' => $this->faker->name(),
+            'county' => $this->faker->country(),
         ];
     }
 }
