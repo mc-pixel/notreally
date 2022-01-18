@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->string('favorite_beer');
-            $table->string('prefered_type_of_beer');
+            $table->string('preferred_type_of_beer');
             $table->timestamps();
         });
     }
