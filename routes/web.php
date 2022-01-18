@@ -13,19 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [\App\Http\Controllers\WelcomeController::class, "show"]);
+Route::get('/', [\App\Http\Controllers\WelcomeController::class, 'show']);
 
+Route::get('/country.index', [\App\Http\Controllers\CountryController::class, 'index']);
+Route::get('/country.create', [\App\Http\Controllers\CountryController::class, 'create']);
 
-Route::get('/country.index',[\App\Http\Controllers\CountryController::class, "index"]);
-Route::get('/country.create',[\App\Http\Controllers\CountryController::class, "create"]);
+Route::get('/bar.index', [\App\Http\Controllers\BarController::class, 'index']);
+Route::get('/bar.create', [\App\Http\Controllers\BarController::class, 'create']);
 
-
-Route::get('/bar.index',[\App\Http\Controllers\BarController::class,"index"]);
-Route::get('/bar.create',[\App\Http\Controllers\BarController::class,"create"]);
-
-Route::get('beer.index',[\App\Http\Controllers\BeerController::class,"index"]);
-Route::get('beer.create',[\App\Http\Controllers\BeerController::class,"create"]);
-
+Route::get('beer.index', [\App\Http\Controllers\BeerController::class, 'index']);
+Route::get('beer.create', [\App\Http\Controllers\BeerController::class, 'create']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
