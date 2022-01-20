@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Bar;
 
 class BarController extends Controller
 {
@@ -8,7 +9,7 @@ class BarController extends Controller
     {
         $bars = Bar::all();
 
-        return view('bar.index', compact('bars', $bars));
+        return view('bar.index', compact('bars'));
     }
 
     public function create()
