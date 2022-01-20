@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Beer;
+use Illuminate\Http\Request;
 
 class BeerController extends Controller
 {
