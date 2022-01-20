@@ -14,11 +14,11 @@ class BeerFactory extends Factory
     public function definition()
     {
         return [
-            'name'   => $this->faker->name(),
-            'type'   => $this->faker->name(),
+            'name'                  => $this->faker->name(),
+            'type'                  => $this->faker->name(),
             'alcohol_percentage'    => $this->faker->numberBetween($min = 1, $max = 67.5),
-            'year'   => $this->faker->numberBetween($min = 1478, $max = 2021),
-            'country' => $this->faker->country(),
+            'year'                  => $this->faker->numberBetween($min = 1478, $max = 2021),
+            'country'               => $this->faker->country(),
         ];
     }
 }

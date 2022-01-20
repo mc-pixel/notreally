@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
-use App\Models\User;
-use App\Models\Beer;
 use App\Models\Bar;
+use App\Models\Beer;
 use App\Models\Country;
+use App\Models\User;
+use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -21,6 +21,5 @@ class DatabaseSeeder extends Seeder
         Beer::factory(10)->create();
         Bar::factory(10)->create();
         Country::factory(10)->create();
-
     }
 }
