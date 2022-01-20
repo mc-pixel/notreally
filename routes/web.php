@@ -18,7 +18,7 @@ Route::get('/', [\App\Http\Controllers\WelcomeController::class, 'show']);
 Route::get('/country.index', [\App\Http\Controllers\CountryController::class, 'index']);
 Route::get('/country.create', [\App\Http\Controllers\CountryController::class, 'create']);
 
-Route::get('/bar.index', [\App\Http\Controllers\BarController::class, 'index']);
+Route::get('/bar_index', [\App\Http\Controllers\BarController::class, 'index']);
 Route::get('/bar.create', [\App\Http\Controllers\BarController::class, 'create']);
 
 Route::get('beer.index', [\App\Http\Controllers\BeerController::class, 'index']);

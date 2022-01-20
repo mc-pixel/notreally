@@ -10,7 +10,7 @@ class BarController extends Controller
     {
         $bars = Bar::all();
 
-        return view('bar.index', compact('bars'));
+        return view('bar_index', compact('bars'));
     }
 
     public function create()
