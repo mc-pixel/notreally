@@ -7,7 +7,7 @@
     <th>country</th>
     </thead>
     <tbody>
-    @foreach($bars as $bar)
+    @foreach($beers as $beer)
         <tr>
             <td>{{$beer->name}}</td>
             <td>{{$beer->type}}</td>

@@ -15,6 +15,6 @@ class BarController extends Controller
 
     public function create()
     {
-        return view('bar.create');
+        return view('bar_create');
     }
 }
