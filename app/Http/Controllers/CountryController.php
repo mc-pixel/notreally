@@ -8,13 +8,13 @@ class CountryController extends Controller
 {
     public function index()
     {
-        $country = Country::all();
+        $countrys = Country::all();
 
-        return view('country.index', compact('country', $country));
+        return view('country_index', compact('countrys'));
     }
 
     public function create()
     {
-        return view('country.create');
+        return view('country_create');
     }
 }
