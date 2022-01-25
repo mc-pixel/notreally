@@ -25,9 +25,7 @@ Route::get('/bar.create', [\App\Http\Controllers\BarController::class, 'create']
 Route::get('beer.index', [\App\Http\Controllers\BeerController::class, 'index']);
 Route::get('beer.create', [\App\Http\Controllers\BeerController::class, 'create']);
 
-
 Route::get('health', HealthCheckResultsController::class);
-
 
 Route::get('/dashboard', function () {
     return view('dashboard');
