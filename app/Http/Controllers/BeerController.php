@@ -47,4 +47,7 @@ class BeerController extends Controller
 
         return redirect('beer_index');
     }
+
+    //missing edit maybe implement show for later
+
 }

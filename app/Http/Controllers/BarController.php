@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Bar;
+use Illuminate\Http\Request;
 
 class BarController extends Controller
 {
@@ -16,5 +17,28 @@ class BarController extends Controller
     public function create()
     {
         return view('bar_create');
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'name'              => 'required|string',
+            'location'          => 'required|string',
+
+        ]);
+        $bar = Bar::create([
+            'name'              => $request->name,
+            'location'          => $request->location,
+        ]);
+
+        return redirect('bar_index', compact('bar'));
+    }
+
+    public function destroy(Request $request, Bar $bar)
+    {
+        $bar->delete();
+        $request->session()->flash('message', 'Successfully sent this file back to oblivion!');
+
+        return redirect('bar_index');
     }
 }
