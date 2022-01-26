@@ -16,7 +16,7 @@ class CreateBarsTable extends Migration
         Schema::create('bars', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('location');
+            $table->foreignId('country_id');
             $table->timestamps();
         });
     }
