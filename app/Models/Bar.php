@@ -9,8 +9,7 @@ class Bar extends Model
 {
     use HasFactory;
 
-    public function bar()
-    {
-        return $this->hasMany(Bar::class);
+    public function beers(){
+        return $this->belongsToMany(Beer::class);
     }
 }

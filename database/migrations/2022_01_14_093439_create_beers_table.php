@@ -19,7 +19,7 @@ class CreateBeersTable extends Migration
             $table->string('type');
             $table->string('alcohol_percentage')->nullable();
             $table->string('year');
-            $table->string('country');
+            $table->foreignId('country_id');
             $table->timestamps();
         });
     }
