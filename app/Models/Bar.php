@@ -9,7 +9,8 @@ class Bar extends Model
 {
     use HasFactory;
 
-    public function beers(){
+    public function beers()
+    {
         return $this->belongsToMany(Beer::class);
     }
 }
