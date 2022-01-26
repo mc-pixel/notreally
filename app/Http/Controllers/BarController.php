@@ -21,15 +21,12 @@ class BarController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
+        $validator = $request->validate([
             'name'              => 'required|string',
             'location'          => 'required|string',
 
         ]);
-        $bar = Bar::create([
-            'name'              => $request->name,
-            'location'          => $request->location,
-        ]);
+        $bar = Bar::create('validator');
 
         return redirect('bar_index', compact('bar'));
     }

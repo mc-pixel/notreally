@@ -21,7 +21,7 @@ class BeerController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
+        $validator = $request->validate([
             'name'              => 'required|string',
             'type'              => 'required|string',
             'alcohol_percentage'=> 'required|integer',
@@ -29,13 +29,7 @@ class BeerController extends Controller
             'country'           => 'required|string',
 
         ]);
-        $beer = Beer::create([
-            'name'              => $request->name,
-            'type'              => $request->type,
-            'alcohol_percentage'=> $request->alcohol_percentage,
-            'year'              => $request->year,
-            'country'           => $request->country,
-        ]);
+        $beer = Beer::create('validator');
 
         return redirect('beer_index', compact('beer'));
     }

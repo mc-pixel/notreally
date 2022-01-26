@@ -21,12 +21,10 @@ class CountryController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
+        $validator = $request->validate([
             'name'=> 'required|string',
         ]);
-        $country = Country::create([
-            'name'=> $request->name,
-        ]);
+        $country = Country::create('validator');
 
         return redirect('country_index', compact('country'));
     }
