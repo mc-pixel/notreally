@@ -49,5 +49,4 @@ class BeerController extends Controller
     }
 
     //missing edit maybe implement show for later
-
 }
