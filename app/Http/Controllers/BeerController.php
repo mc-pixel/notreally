@@ -29,7 +29,7 @@ class BeerController extends Controller
             'country'           => 'required|string',
 
         ]);
-        $beer = Beer::create('validator');
+        $beer = Beer::create($validator);
 
         return redirect('beer_index', compact('beer'));
     }
@@ -42,5 +42,21 @@ class BeerController extends Controller
         return redirect('beer_index');
     }
 
-    //missing edit maybe implement show for later
+    public function edit(Beer $beer)
+    {
+        return view('beer_index', compact('beer'));
+    }
+
+    public function update(Request $request, Beer $beer)
+    {
+        $validator = $request->validate([
+            'name' => 'required|string',
+            'type' => 'required|string',
+            'alcohol_percentage' => 'required|integer',
+            'year' => 'required|integer',
+            'country' => 'required|string',
+
+        ]);
+        $beer->update($validator);
+    }
 }
