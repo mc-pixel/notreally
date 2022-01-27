@@ -24,7 +24,7 @@ class CountryController extends Controller
         $validator = $request->validate([
             'name'=> 'required|string',
         ]);
-        $country = Country::create('validator');
+        $country = Country::create($validator);
 
         return redirect('country_index', compact('country'));
     }
@@ -35,5 +35,18 @@ class CountryController extends Controller
         $request->session()->flash('message', 'Successfully sent this file back to oblivion!');
 
         return redirect('country_index');
+    }
+
+    public function edit(Country $country)
+    {
+        return view('country_index', compact('country'));
+    }
+
+    public function update(Request $request, Country $country)
+    {
+        $validator = $request->validate([
+            'name'=> 'required|string',
+        ]);
+        $country->update($validator);
     }
 }
