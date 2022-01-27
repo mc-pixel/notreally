@@ -50,11 +50,11 @@ class BeerController extends Controller
     public function update(Request $request, Beer $beer)
     {
         $validator = $request->validate([
-            'name' => 'required|string',
-            'type' => 'required|string',
+            'name'               => 'required|string',
+            'type'               => 'required|string',
             'alcohol_percentage' => 'required|integer',
-            'year' => 'required|integer',
-            'country' => 'required|string',
+            'year'               => 'required|integer',
+            'country'            => 'required|string',
 
         ]);
         $beer->update($validator);
