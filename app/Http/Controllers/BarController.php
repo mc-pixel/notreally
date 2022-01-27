@@ -41,7 +41,7 @@ class BarController extends Controller
 
     public function edit(Bar $bar)
     {
-        return view('bar_index',compact('bar'));
+        return view('bar_index', compact('bar'));
     }
 
     public function update(Request $request, Bar $bar)
@@ -52,6 +52,5 @@ class BarController extends Controller
 
         ]);
         $bar->update($validator);
-
     }
 }
