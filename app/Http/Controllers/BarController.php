@@ -38,4 +38,20 @@ class BarController extends Controller
 
         return redirect('bar_index');
     }
+
+    public function edit(Bar $bar)
+    {
+        return view('bar_index',compact('bar'));
+    }
+
+    public function update(Request $request, Bar $bar)
+    {
+        $validator = $request->validate([
+            'name'              => 'required|string',
+            'location'          => 'required|string',
+
+        ]);
+        $bar->update($validator);
+
+    }
 }
