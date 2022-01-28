@@ -11,6 +11,7 @@ class BarController extends Controller
     public function index()
     {
         $bars = Bar::all();
+
         return view('bar_index', compact('bars'));
     }
 
