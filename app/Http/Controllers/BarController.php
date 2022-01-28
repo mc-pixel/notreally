@@ -25,7 +25,7 @@ class BarController extends Controller
     public function store(Request $request)
     {
         $validator = $request->validate([
-            'name'              => 'required|string',
+            'name'                => 'required|string',
             'country_id'          => 'required|exists:countries,id',
         ]);
 
@@ -50,7 +50,7 @@ class BarController extends Controller
     public function update(Request $request, Bar $bar)
     {
         $validator = $request->validate([
-            'name'              => 'required|string',
+            'name'                => 'required|string',
             'country_id'          => 'required|exists:countries,id',
 
         ]);

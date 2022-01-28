@@ -25,10 +25,10 @@ class BeerController extends Controller
     public function store(Request $request)
     {
         $validator = $request->validate([
-            'name'              => 'required|string',
-            'type'              => 'required|string',
-            'alcohol_percentage'=> 'required|integer',
-            'year'              => 'required|integer',
+            'name'                 => 'required|string',
+            'type'                 => 'required|string',
+            'alcohol_percentage'   => 'required|integer',
+            'year'                 => 'required|integer',
             'country_id'           => 'required|exists:countries,id',
 
         ]);
@@ -53,10 +53,10 @@ class BeerController extends Controller
     public function update(Request $request, Beer $beer)
     {
         $validator = $request->validate([
-            'name'               => 'required|string',
-            'type'               => 'required|string',
-            'alcohol_percentage' => 'required|integer',
-            'year'               => 'required|integer',
+            'name'                  => 'required|string',
+            'type'                  => 'required|string',
+            'alcohol_percentage'    => 'required|integer',
+            'year'                  => 'required|integer',
             'country_id'            => 'required|exists:countries,id',
 
         ]);
