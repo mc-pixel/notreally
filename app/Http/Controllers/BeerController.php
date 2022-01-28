@@ -29,7 +29,7 @@ class BeerController extends Controller
             'type'              => 'required|string',
             'alcohol_percentage'=> 'required|integer',
             'year'              => 'required|integer',
-            'country'           => 'required|exists:countries,id',
+            'country_id'           => 'required|exists:countries,id',
 
         ]);
         $beer = Beer::create($validator);
@@ -57,7 +57,7 @@ class BeerController extends Controller
             'type'               => 'required|string',
             'alcohol_percentage' => 'required|integer',
             'year'               => 'required|integer',
-            'country'            => 'required|string',
+            'country_id'            => 'required|exists:countries,id',
 
         ]);
         $beer->update($validator);

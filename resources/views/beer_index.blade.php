@@ -13,7 +13,7 @@
             <td>{{$beer->type}}</td>
             <td>{{$beer->alcohol_percentage}}</td>
             <td>{{$beer->year}}</td>
-            <td>{{$beer->country}}</td>
+            <td>{{$beer->country->name}}</td>
         </tr>
     @endforeach
     </tbody>

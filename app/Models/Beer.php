@@ -16,7 +16,7 @@ class Beer extends Model implements HasMedia
         'type',
         'alcohol_percentage',
         'year',
-        'country',
+        'country_id',
     ];
 
     public function country()

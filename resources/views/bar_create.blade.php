@@ -7,7 +7,7 @@
             <label>name </label>
             <input type="text" id="name" title="name" name="name">
 
-            <select name="location">
+            <select name="country_id">
                 @foreach($countries as $country)
                     <option value={{$country->id}}>{{$country->name}}</option>
                 @endforeach

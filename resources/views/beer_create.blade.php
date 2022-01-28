@@ -12,7 +12,7 @@
         <label>year </label>
         <input type="text" name="year">
 
-        <select name="country">
+        <select name="country_id">
             @foreach($countries as $country)
                 <option value={{$country->id}}>{{$country->name}}</option>
             @endforeach

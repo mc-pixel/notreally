@@ -26,7 +26,7 @@ class BarController extends Controller
     {
         $validator = $request->validate([
             'name'              => 'required|string',
-            'location'          => 'required|exists:countries,id',
+            'country_id'          => 'required|exists:countries,id',
         ]);
 
         Bar::create($validator);
@@ -51,7 +51,7 @@ class BarController extends Controller
     {
         $validator = $request->validate([
             'name'              => 'required|string',
-            'location'          => 'required|exists:countries,id',
+            'country_id'          => 'required|exists:countries,id',
 
         ]);
         $bar->update($validator);

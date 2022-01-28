@@ -10,7 +10,7 @@ class Bar extends Model
     use HasFactory;
     protected $fillable = [
         'name',
-        'location',
+        'country_id',
     ];
 
     public function beers()
