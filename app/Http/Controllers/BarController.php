@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Bar;
+use App\Models\Country;
 use Illuminate\Http\Request;
 
 class BarController extends Controller
@@ -16,7 +17,8 @@ class BarController extends Controller
 
     public function create()
     {
-        return view('bar_create');
+        $countrys = Country::all();
+        return view('bar_create',compact('countrys'));
     }
 
     public function store(Request $request)
@@ -26,6 +28,7 @@ class BarController extends Controller
             'location'          => 'required|string',
 
         ]);
+
         $bar = Bar::create('validator');
 
         return redirect('bar_index', compact('bar'));
