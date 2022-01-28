@@ -14,8 +14,8 @@ class Beer extends Model implements HasMedia
     protected $fillable = [
         'name',
         'type',
-        'alcohol_percentage' ,
-        'year' ,
+        'alcohol_percentage',
+        'year',
         'country',
     ];
 

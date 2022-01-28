@@ -18,7 +18,8 @@ class BarController extends Controller
     public function create()
     {
         $countries = Country::all();
-        return view('bar_create',compact('countries'));
+
+        return view('bar_create', compact('countries'));
     }
 
     public function store(Request $request)
@@ -29,6 +30,7 @@ class BarController extends Controller
         ]);
 
         Bar::create($validator);
+
         return redirect('bar_index');
     }
 
