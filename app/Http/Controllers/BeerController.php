@@ -19,7 +19,7 @@ class BeerController extends Controller
     {
         $countries = Country::all();
 
-        return view('beer_create',compact('countries'));
+        return view('beer_create', compact('countries'));
     }
 
     public function store(Request $request)
