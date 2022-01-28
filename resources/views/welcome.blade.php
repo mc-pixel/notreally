@@ -22,8 +22,8 @@
     <div class="max-w-6xl mx-auto py-4  text-gray-600 text-sm  flex justify-between">
         <div class="px-6">Biersal(notreally)</div>
         <div class="px-6 flex flex-row justify-center gap-x-6">
-            <a href="" class="hover:underline decoration-pink-500 decoration-2">Beers</a>
-            <a href="" class="hover:underline decoration-pink-500 decoration-2">Bar</a>
+            <a href="{{route('beer_index')}}" class="hover:underline decoration-pink-500 decoration-2">Beers</a>
+            <a href="/beer" class="hover:underline decoration-pink-500 decoration-2">Bar</a>
             <a href="" class="hover:underline decoration-pink-500 decoration-2">Menu item 3</a>
         </div>
         <div class="px-6">

@@ -8,7 +8,7 @@
         @foreach($bars as $bar)
             <tr>
                 <td>{{$bar->name}}</td>
-                <td>{{$bar->location}}</td>
+                <td>{{$bar->country->name}}</td>
             </tr>
         @endforeach
     </tbody>

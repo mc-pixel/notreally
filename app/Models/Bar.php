@@ -17,4 +17,9 @@ class Bar extends Model
     {
         return $this->belongsToMany(Beer::class);
     }
+
+    public function country()
+    {
+        return $this->belongsTo(Country::class);
+    }
 }
