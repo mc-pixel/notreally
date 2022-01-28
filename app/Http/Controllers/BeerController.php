@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Beer;
+use App\Models\Country;
 use Illuminate\Http\Request;
 
 class BeerController extends Controller
@@ -16,6 +17,7 @@ class BeerController extends Controller
 
     public function create()
     {
+        $countries = Country::all();
         return view('beers_create');
     }
 
@@ -26,12 +28,12 @@ class BeerController extends Controller
             'type'              => 'required|string',
             'alcohol_percentage'=> 'required|integer',
             'year'              => 'required|integer',
-            'country'           => 'required|string',
+            'country'           => 'required|exists:countries,id',
 
         ]);
         $beer = Beer::create($validator);
 
-        return redirect('beer_index', compact('beer'));
+        return redirect('beer_index');
     }
 
     public function destroy(Request $request, Beer $beer)

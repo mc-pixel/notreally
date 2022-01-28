@@ -11,6 +11,13 @@ class Beer extends Model implements HasMedia
 {
     use HasFactory;
     use InteractsWithMedia;
+    protected $fillable = [
+        'name',
+        'type',
+        'alcohol_percentage' ,
+        'year' ,
+        'country',
+    ];
 
     public function country()
     {

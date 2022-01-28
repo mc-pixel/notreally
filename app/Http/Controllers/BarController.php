@@ -17,22 +17,19 @@ class BarController extends Controller
 
     public function create()
     {
-        $countrys = Country::all();
-
-        return view('bar_create', compact('countrys'));
+        $countries = Country::all();
+        return view('bar_create',compact('countries'));
     }
 
     public function store(Request $request)
     {
         $validator = $request->validate([
             'name'              => 'required|string',
-            'location'          => 'required|string',
-
+            'location'          => 'required|exists:countries,id',
         ]);
 
-        $bar = Bar::create('validator');
-
-        return redirect('bar_index', compact('bar'));
+        Bar::create($validator);
+        return redirect('bar_index');
     }
 
     public function destroy(Request $request, Bar $bar)
@@ -52,7 +49,7 @@ class BarController extends Controller
     {
         $validator = $request->validate([
             'name'              => 'required|string',
-            'location'          => 'required|string',
+            'location'          => 'required|exists:countries,id',
 
         ]);
         $bar->update($validator);

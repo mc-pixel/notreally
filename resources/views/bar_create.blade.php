@@ -5,10 +5,10 @@
 
         <div>
             <label>name </label>
-            <input type="text" id="name" title="name">
+            <input type="text" id="name" title="name" name="name">
 
-            <select >
-                @foreach($countrys as $country)
+            <select name="location">
+                @foreach($countries as $country)
                     <option value={{$country->id}}>{{$country->name}}</option>
                 @endforeach
             </select>
