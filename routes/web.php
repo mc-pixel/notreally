@@ -21,11 +21,11 @@ Route::get('/country_create', [\App\Http\Controllers\CountryController::class, '
 
 Route::get('/bar_index', [\App\Http\Controllers\BarController::class, 'index']);
 Route::get('/bar_create', [\App\Http\Controllers\BarController::class, 'create']);
-Route::post('/bar_store',[\App\Http\Controllers\BarController::class,'store']);
+Route::post('/bar_store', [\App\Http\Controllers\BarController::class, 'store']);
 
 Route::get('beer_index', [\App\Http\Controllers\BeerController::class, 'index']);
 Route::get('beer_create', [\App\Http\Controllers\BeerController::class, 'create']);
-Route::get('beer_store',[\App\Http\Controllers\BeerController::class,'store']);
+Route::get('beer_store', [\App\Http\Controllers\BeerController::class, 'store']);
 
 Route::get('health', HealthCheckResultsController::class);
 
