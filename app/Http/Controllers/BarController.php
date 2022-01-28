@@ -18,7 +18,8 @@ class BarController extends Controller
     public function create()
     {
         $countrys = Country::all();
-        return view('bar_create',compact('countrys'));
+
+        return view('bar_create', compact('countrys'));
     }
 
     public function store(Request $request)
