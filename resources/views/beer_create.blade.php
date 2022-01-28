@@ -5,6 +5,12 @@
     <div>
         <label>name </label>
         <input type="text" id="name" title="name" name="name">
+        <label>type </label>
+        <input type="text" name="type">
+        <label>alcohol_percentage </label>
+        <input type="text" name="alcohol_percentage">
+        <label>year </label>
+        <input type="text" name="year">
 
         <select name="country">
             @foreach($countries as $country)
