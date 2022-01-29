@@ -1,7 +1,6 @@
 <form action="{{route('country_store')}}" method="post" class="mb-16 flex">
     @csrf
     @honeypot
-
     <div>
         <label>name </label>
         <input type="text" id="name" title="name" name="name">
