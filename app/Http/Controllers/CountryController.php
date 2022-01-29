@@ -16,9 +16,8 @@ class CountryController extends Controller
 
     public function create()
     {
-        $countries = Country::all();
 
-        return view('country_create', compact('countries'));
+        return view('country_create');
     }
 
     public function store(Request $request)
