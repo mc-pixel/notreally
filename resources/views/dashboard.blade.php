@@ -11,6 +11,7 @@
         <a href="{{route('bar_index')}}" class="hover:underline decoration-pink-500 decoration-2">Bar</a>
         <a href="{{route('bar_create')}}" class="hover:underline decoration-pink-500 decoration-2">Bar create</a>
         <a href="{{route('country_index')}}" class="hover:underline decoration-pink-500 decoration-2">country</a>
+        <a href="{{route('country_create')}}" class="hover:underline decoration-pink-500 decoration-2">country create</a>
 
     </div>
 

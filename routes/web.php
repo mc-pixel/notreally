@@ -17,7 +17,8 @@ use Spatie\Health\Http\Controllers\HealthCheckResultsController;
 Route::get('/', [\App\Http\Controllers\WelcomeController::class, 'show']);
 
 Route::get('/country_index', [\App\Http\Controllers\CountryController::class, 'index'])->name('country_index');
-Route::get('/country_create', [\App\Http\Controllers\CountryController::class, 'create']);
+Route::get('/country_create', [\App\Http\Controllers\CountryController::class, 'create'])->name('country_create');
+Route::post('/country_store', [\App\Http\Controllers\BarController::class, 'store'])->name('country_store');
 
 Route::get('/bar_index', [\App\Http\Controllers\BarController::class, 'index'])->name('bar_index');
 Route::get('/bar_create', [\App\Http\Controllers\BarController::class, 'create'])->name('bar_create');

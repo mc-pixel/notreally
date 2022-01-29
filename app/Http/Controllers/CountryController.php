@@ -9,14 +9,15 @@ class CountryController extends Controller
 {
     public function index()
     {
-        $countrys = Country::all();
+        $countries = Country::all();
 
-        return view('country_index', compact('countrys'));
+        return view('country_index', compact('countries'));
     }
 
     public function create()
     {
-        return view('country_create');
+        $countries = Country::all();
+        return view('country_create',compact('countries'));
     }
 
     public function store(Request $request)
@@ -24,9 +25,10 @@ class CountryController extends Controller
         $validator = $request->validate([
             'name'=> 'required|string',
         ]);
-        $country = Country::create($validator);
 
-        return redirect('country_index', compact('country'));
+         Country::create($validator);
+
+        return redirect('country_index');
     }
 
     public function destroy(Request $request, Country $country)

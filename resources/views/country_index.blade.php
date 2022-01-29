@@ -3,7 +3,7 @@
     <th>name</th>
     </thead>
     <tbody>
-    @foreach($countrys as $country)
+    @foreach($countries as $country)
         <tr>
             <td>{{$country->name}}</td>
         </tr>
