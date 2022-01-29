@@ -16,14 +16,14 @@ use Spatie\Health\Http\Controllers\HealthCheckResultsController;
 
 Route::get('/', [\App\Http\Controllers\WelcomeController::class, 'show']);
 
-Route::get('/country_index', [\App\Http\Controllers\CountryController::class, 'index']);
+Route::get('/country_index', [\App\Http\Controllers\CountryController::class, 'index'])->name('country_index');
 Route::get('/country_create', [\App\Http\Controllers\CountryController::class, 'create']);
 
-Route::get('/bar_index', [\App\Http\Controllers\BarController::class, 'index']);
+Route::get('/bar_index', [\App\Http\Controllers\BarController::class, 'index'])->name('bar_index');
 Route::get('/bar_create', [\App\Http\Controllers\BarController::class, 'create']);
 Route::post('/bar_store', [\App\Http\Controllers\BarController::class, 'store'])->name('bar_store');
 
-Route::get('beer_index', [\App\Http\Controllers\BeerController::class, 'index']);
+Route::get('beer_index', [\App\Http\Controllers\BeerController::class, 'index'])->name('beer_index');
 Route::get('beer_create', [\App\Http\Controllers\BeerController::class, 'create']);
 Route::post('beer_store', [\App\Http\Controllers\BeerController::class, 'store'])->name('beer_store');
 

@@ -23,8 +23,8 @@
         <div class="px-6">Biersal(notreally)</div>
         <div class="px-6 flex flex-row justify-center gap-x-6">
             <a href="{{route('beer_index')}}" class="hover:underline decoration-pink-500 decoration-2">Beers</a>
-            <a href="/beer" class="hover:underline decoration-pink-500 decoration-2">Bar</a>
-            <a href="" class="hover:underline decoration-pink-500 decoration-2">Menu item 3</a>
+            <a href="{{route('bar_index')}}" class="hover:underline decoration-pink-500 decoration-2">Bar</a>
+            <a href="{{route('country_index')}}" class="hover:underline decoration-pink-500 decoration-2">country</a>
         </div>
         <div class="px-6">
             @if (Route::has('login'))
