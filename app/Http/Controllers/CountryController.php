@@ -17,7 +17,8 @@ class CountryController extends Controller
     public function create()
     {
         $countries = Country::all();
-        return view('country_create',compact('countries'));
+
+        return view('country_create', compact('countries'));
     }
 
     public function store(Request $request)
@@ -26,7 +27,7 @@ class CountryController extends Controller
             'name'=> 'required|string',
         ]);
 
-         Country::create($validator);
+        Country::create($validator);
 
         return redirect('country_index');
     }
